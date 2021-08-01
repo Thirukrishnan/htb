@@ -1,0 +1,19 @@
+ip:10.10.10.165
+my ip:10.10.14.2
+open-ports 	service 	version-info						vulnerable(y/n)
+22		ssh		OpenSSH 7.9p1 Debian 10+deb10u1 (protocol 2.0)			n
+		
+80		http		nostromo 1.9.6							yes
+
+david:$1$e7NfNpNi$A6nCwOTqrNR2oDuIKirRZ/:Nowonly4me
+
+next once we ls some directories inside david we get to see protected
+file area where we find zip files
+once we bruteforce it we get private key to login as david
+
+user flag:7db0b48469606a42cec20750d9782f3d
+
+we see server-status.sg in bin directory of our home
+it runs sudo command to run some journalctl and checking how to escalate privilege with it we have to just shrink the size of the terminal
+so as to get into less mode and then we can execute bash as root
+root:9aa36a6d76f785dfd320a478f6e0d906

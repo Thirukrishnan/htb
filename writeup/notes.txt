@@ -1,0 +1,10 @@
+ip:10.10.10.138
+my ip:10.10.14.5 
+
+open-ports 	service		version 	vulnerable(y/n)
+80		http		Apache 2.4.25	n	
+22		ssh		Openssh 7.4p1	n
+
+
+user:d4e493fd4068afc9eb1aa6a55319f978
+root:eeba47f60b48ef92b734f9b6198d7226

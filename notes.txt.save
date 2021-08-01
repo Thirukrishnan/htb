@@ -1,0 +1,12 @@
+knife machine
+target ip: 10.10.10.242
+open-ports:80,22
+services running:http-server and ssh
+service		service-info
+http		Apache/2.4.41 (Ubuntu) Server at 10.10.10.242 Port 80
+ssh		OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0)
+
+OS:Ubuntu
+
+in http server there isnt any hyperlink to any page and its bit doubtful
+so run service scan and dirbuster.

@@ -1,0 +1,16 @@
+ip:10.10.10.134
+my ip:10.10.14.4
+
+ports:22,135,139,445,49670,49667,49669,49665,47001,49666,49664,5985
+
+We have anonymous access to smb share Backups 
+In the note we can see that the backup is very large and it is not
+advised to get it locally
+But on the other hand we can see .vhd file which can be mounted and
+we can crack the NTLM hashes
+We get password for user L4mpje-PC:bureaulampje
+
+
+user:9bfe57d5c3309db3a151772f9d86c6cd  
+root:958850b91811676ed6620a9c430e65c8  
+

@@ -1,0 +1,30 @@
+ip 10.10.10.56
+os linux
+open-ports :80 Apache server 2.4.18 no vuln
+open-ports:2222 open ssh 7.2.p2 no vuln
+-----------------------------------------------------
+spidering the host did not reveal anything
+dir busting shocker.htb --- no useful results
+so now dir busting 10.10.10.56
+this didnt reveal anything
+
+so next i am using gobuster on /cgi-bin directory with extensions php,html,.sh bcoz this is a 
+linux machine with apache server
+
+we found user.sh in cgi-bin dirctory
+And as the name suggests i got a idea to try shell shock
+so i used the metasploit
+module:multi/http/apache_mod_cgi_bash_env_exec
+targeturi:/cgi-bin/user.sh
+we get a reverse shell
+
+------------------------root-----------------------
+we can execute /usr/bin/perl without password as root so just write a perl script to read /root/root.txt file 
+----------------------------------------------------
+user flag:
+root flag:8bf43d5d9233e115e87e9b5c4262a4e3
+
+----------------------------------------------------------------
+learnt how to exploit shell shock
+need to have multiple directory busting tool
+remember to also run directory busting on the folders you found.......

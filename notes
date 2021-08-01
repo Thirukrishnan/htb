@@ -1,0 +1,82 @@
+my ip :10.10.10.11
+OS :Windows
+open ports:49154,8500,135
+vulnerable service:fmtp(flight message trnsport protocol 8500 port)
+navigating to the site and waiting for few sec we get 
+some directories and exploring them we see Cold fusion is running.
+searching some exploits for it and version 8 we could see directory traversal and arbitrary file upload.
+so i guess we need to get somehow admin password to execute meterpreter shell.
+
+password is:happyday (but we get the sha1 hash which has to be decrypted)
+ 
+------------------------------------------------------------------------
+
+
+
+script-kiddie:
+ip:10.10.10.226
+ports:5000,22
+
+using python as backend (i think so)WSGI web application library.
+WSGI stands for "Web Server Gateway Interface". It is used to forward
+ requests from a web server (such as Apache or NGINX) to a backend
+ Python web application or framework. From there, responses are then
+ passed back to the webserver to reply to the requestor
+
+vuln:There is a vuln with msfvenom apk template injection which we 
+use to get a rev shell
+
+For privesc we use
+
+
+----------------------------------------------------------------------
+For release Arena in htb use different vpn file 
+name:cap
+ip:10.129.119.234
+open-ports:22,80,21
+
+ftp login:
+the webiste keeps giving us pcap files in the path /data/pcapid
+i tried getting the pcapid 0 file and analyzed..
+found the ftp login credentials of nathan
+nathan:Buck3tH4TF0RM3!
+---------------------------------------------------------------------
+machine:Armageddon
+ip:10.10.10.233
+my-ip:10.10.14.5
+OS:Linux
+open-ports:22,80
+service:Openssh 7.4,Apache httpd 2.4.6 PHP/5.4.16
+vuln-service:Drupal 7
+enumeraing the system we get creds for database drupal
+username:drupaluser
+password:CQHEy@9M*m23gBVj
+
+dumping the database we get 
+usernmae:brucetherealadmin
+password:booboo
+
+ssh into the system with this we see
+snap can be run as root without password
+
+-----------------------------------------------------------------------
+				love
+ip:10.10.10.239
+OS:windows
+open-ports:80,135,139,443,5985,5986,7680,49665,49666,49667,49670,47001
+	   5040,49669,445,5000,49664,3306,49668
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

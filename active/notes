@@ -1,0 +1,7 @@
+ip :10.10.10.100
+my ip :10.10.14.5
+
+open-ports:refer scan.txt
+
+First i am enumerating smb with smbmap
+Follow 0xdf writeup

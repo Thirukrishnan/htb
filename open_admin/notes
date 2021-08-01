@@ -1,0 +1,38 @@
+ip:10.10.10.171
+my ip:10.10.14.2 
+open-ports:22,80
+
+This was one of the toughest easy level box i encountered
+
+You need to compromise three accounts to get a user flag.
+
+First rce @ open-netadmin in this url http://10.10.10.171/ona/
+With this try to get a reverse shell by plaing around with the exploit
+
+Then we find database password @local/config/database_settings.inc.php
+'db_type' => 'mysqli',
+        'db_host' => 'localhost',
+        'db_login' => 'ona_sys',
+        'db_passwd' => 'n1nj4W4rri0R!',
+        'db_database' => 'ona_default',
+        'db_debug' => false,
+NO info at all in the database
+
+But use the same password to ssh and we get in as jimmy but still 
+no user flag
+
+netstat tulpn | grep LISTEN
+We find a another web server running in port 52846
+We find the web pages in /var/www/internal and with that we get
+encrypted private key of joanna using jimmy&Revealed
+Now using ssh2john we get password as bloodninjas
+Finally we get the user flag
+
+Root was very easy
+sudo -l
+/bin/nano /opt/priv  can be run as sudo without passwd
+Once we get the nano opened press ctrl+r to read file with this
+we get root flag
+user:c9b2cf07d40807e62af62660f0c81b5f
+root:2f907ed450b361b2c2bf4e8795d5b561
+
