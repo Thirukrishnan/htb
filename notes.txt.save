@@ -10,3 +10,6 @@ OS:Ubuntu
 
 in http server there isnt any hyperlink to any page and its bit doubtful
 so run service scan and dirbuster.
+
+We dont get any interesting file and then i checked exploit for php version and we have one.
+Php version (8) was packed with a backdoor and this can be accessed and given command  by a http header User-Agentt.
