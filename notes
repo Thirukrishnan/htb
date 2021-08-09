@@ -40,6 +40,9 @@ the webiste keeps giving us pcap files in the path /data/pcapid
 i tried getting the pcapid 0 file and analyzed..
 found the ftp login credentials of nathan
 nathan:Buck3tH4TF0RM3!
+
+For privesc we can see a server python file which uses capabilities in python for using tcpdump .
+Using this we can use python to assign higher privileges and  read root flag 
 ---------------------------------------------------------------------
 machine:Armageddon
 ip:10.10.10.233
